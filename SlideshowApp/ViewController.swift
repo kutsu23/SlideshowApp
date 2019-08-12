@@ -100,6 +100,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func imageTapAction(_ sender: Any) {
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue){
+        
+    }
     
 }
 
