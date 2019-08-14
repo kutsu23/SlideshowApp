@@ -10,10 +10,33 @@ import UIKit
 
 class ExpansionViewController: UIViewController {
 
+    var expansion_slide_num:Int = 0//スライド番号カウンタ
+
+    @IBOutlet weak var showExpansionImage: UIImageView!
+    //スライド用画像
+    var img1 = UIImage(named: "01_spring")!
+    var img2 = UIImage(named: "02_summer")!
+    var img3 = UIImage(named: "03_fall")!
+    var img4 = UIImage(named: "04_winter")!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(img1)
+        
+        if expansion_slide_num == 1{
+            showExpansionImage.image = img1
+        } else if expansion_slide_num == 2{
+            showExpansionImage.image = img2
+        } else if expansion_slide_num == 3{
+            showExpansionImage.image = img3
+        } else if expansion_slide_num == 4{
+            showExpansionImage.image = img4
+        }
 
         // Do any additional setup after loading the view.
+        
     }
     
 

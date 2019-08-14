@@ -18,14 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8m-O5-zcz">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8m-O5-zcz">
                                 <rect key="frame" x="54" y="339" width="305" height="219"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Evz-1a-LYk" appends="YES" id="BFp-Wg-fuY"/>
-                                    <outletCollection property="gestureRecognizers" destination="Evz-1a-LYk" appends="YES" id="rwg-dD-G5G"/>
-                                    <outletCollection property="gestureRecognizers" destination="Evz-1a-LYk" appends="YES" id="SjU-WJ-U6a"/>
+                                    <outletCollection property="gestureRecognizers" destination="5Lq-lU-whh" appends="YES" id="aoS-x4-ZO3"/>
                                 </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="95" translatesAutoresizingMaskIntoConstraints="NO" id="eh7-H2-nbC">
@@ -64,10 +62,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Evz-1a-LYk">
+                <tapGestureRecognizer id="5Lq-lU-whh">
                     <connections>
-                        <action selector="imageTapAction:" destination="BYZ-38-t0r" id="2uZ-n3-6kZ"/>
-                        <segue destination="qgh-Lk-3sy" kind="show" id="Z7C-c3-4R1"/>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="AON-C1-SEo"/>
+                        <segue destination="qgh-Lk-3sy" kind="showDetail" id="0cf-LM-rdO"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -90,18 +88,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="CkZ-vK-vS4" kind="unwind" unwindAction="unwind:" id="RCb-YD-b8y"/>
+                                    <segue destination="CkZ-vK-vS4" kind="unwind" unwindAction="unwind:" id="06v-lt-ODQ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yqC-6D-3ta"/>
                     </view>
+                    <connections>
+                        <outlet property="showExpansionImage" destination="yow-lw-JXB" id="7yW-Dg-s0J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNo-O4-yg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CkZ-vK-vS4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="750.72463768115949" y="20.758928571428569"/>
+            <point key="canvasLocation" x="943" y="93"/>
         </scene>
     </scenes>
 </document>
