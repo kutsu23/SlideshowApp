@@ -58,13 +58,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="WSL-wI-yx2" id="VvC-2N-brl"/>
+                        <outlet property="nextButton" destination="WeO-Le-Xbn" id="6gh-kb-AIe"/>
                         <outlet property="showImage" destination="H8m-O5-zcz" id="DX2-LT-YGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="5Lq-lU-whh">
                     <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="AON-C1-SEo"/>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="HfC-8O-njO"/>
                         <segue destination="qgh-Lk-3sy" kind="showDetail" id="0cf-LM-rdO"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -88,7 +90,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="CkZ-vK-vS4" kind="unwind" unwindAction="unwind:" id="06v-lt-ODQ"/>
+                                    <segue destination="CkZ-vK-vS4" kind="unwind" unwindAction="unwind:" id="uOh-Wf-6rY"/>
                                 </connections>
                             </button>
                         </subviews>

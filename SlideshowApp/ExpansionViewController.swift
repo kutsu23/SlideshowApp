@@ -10,7 +10,7 @@ import UIKit
 
 class ExpansionViewController: UIViewController {
 
-    var expansion_slide_num:Int = 0//スライド番号カウンタ
+    var expansion_slide_num:Int = 1//スライド番号カウンタ
 
     @IBOutlet weak var showExpansionImage: UIImageView!
     //スライド用画像

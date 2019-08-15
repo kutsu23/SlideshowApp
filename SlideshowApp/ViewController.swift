@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     var img4 = UIImage(named: "04_winter")!
     
     @IBOutlet weak var showImage: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +99,9 @@ class ViewController: UIViewController {
         if playButtonFlag == 0 { //再生ボタン押下フラグ0のとき
             playButtonFlag = 1 //再生ボタン押下フラグを1へ
             (sender as AnyObject).setTitle("停止", for: .normal) //ボタン名称を「停止」へ
+            nextButton.isEnabled = false //進むボタン無効
+            backButton.isEnabled = false //戻るボタン無効
+            
             // 再生ボタンを押すとタイマー作成、始動
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             
@@ -104,6 +109,8 @@ class ViewController: UIViewController {
             playButtonFlag = 0 //再生ボタン押下フラグを0へ
             (sender as AnyObject).setTitle("再生", for: .normal) //ボタン名称を「再生」へ
             self.timer.invalidate() //タイマをリセット
+            nextButton.isEnabled = true //進むボタン有効
+            backButton.isEnabled = true //戻るボタン有効
         }
         
     }
@@ -127,11 +134,10 @@ class ViewController: UIViewController {
 
     
     @IBAction func tapAction(_ sender: Any) {
-        print("image tapped.")
     }
-    
+
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-        
+        // 他の画面から segue を使って戻ってきた時に呼ばれる
     }
     
 }
